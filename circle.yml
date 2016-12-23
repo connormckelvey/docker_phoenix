@@ -8,7 +8,8 @@ dependencies:
   pre:
     - sudo pip install docker-compose
   override:
-    - echo Skipping Installing NPM Dependencies
+    - docker info
+    - docker build --rm=false -t $DOCKER_HUB_USER_ID/phoenix
 
 test:
   override:
