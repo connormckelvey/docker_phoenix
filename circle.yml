@@ -8,6 +8,7 @@ machine:
 
 dependencies:
   pre:
+    - mix deps.get
     - sudo pip install docker-compose
 
 test:
