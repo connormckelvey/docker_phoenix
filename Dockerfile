@@ -43,4 +43,4 @@ COPY . /app
 
 RUN mix local.hex --force
 RUN mix local.rebar --force 
-CMD eval "mix deps.get && mix ecto.create && mix phoenix.server"
+CMD eval "npm install && npm run deploy && mix deps.get && mix ecto.create && mix phoenix.server"

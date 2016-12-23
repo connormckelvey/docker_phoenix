@@ -8,12 +8,12 @@ dependencies:
   pre:
     - sudo pip install docker-compose
   override:
-    - echo lol
+    - echo Skipping Installing NPM Dependencies
 
 test:
   override:
     - docker-compose up -d
-    - docker-compose run phoenix mix test
+    - docker-compose run phoenix mix deps.get && mix test
 
 deployment:
   hub:

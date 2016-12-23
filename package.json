@@ -1,4 +1,6 @@
 {
+  "name": "phoenix-docker",
+  "version": "1.0.0",
   "repository": {},
   "license": "MIT",
   "scripts": {
