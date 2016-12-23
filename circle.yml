@@ -13,7 +13,7 @@ dependencies:
 test:
   override:
     - docker-compose up -d
-    - docker-compose run phoenix mix deps.get && mix test
+    - docker-compose run phoenix mix test
 
 deployment:
   hub:
