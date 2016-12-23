@@ -8,12 +8,12 @@ dependencies:
   pre:
     - sudo pip install docker-compose
   override:
-    - docker build --rm=false -t $DOCKER_HUB_USER_ID/phoenix .
+    - docker build --rm=false -t phoenix .
 
 test:
   override:
     - docker-compose up -d
-    - docker-compose run phoenix mix test
+    - docker-compose run phoenix npm install && npm run deploy && mix deps.get && mix ecto.create && mix test
 
 deployment:
   hub:
