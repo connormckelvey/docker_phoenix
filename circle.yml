@@ -1,6 +1,4 @@
 machine:
-  node:
-    version: 6.9.2
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
   services:
@@ -8,8 +6,9 @@ machine:
 
 dependencies:
   pre:
-    - mix deps.get
     - sudo pip install docker-compose
+  override:
+    - echo lol
 
 test:
   override:
