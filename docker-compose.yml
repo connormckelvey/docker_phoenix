@@ -1,0 +1,14 @@
+version: "2"
+services:
+  phoenix:
+    build: .
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/app
+  
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
