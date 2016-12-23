@@ -15,5 +15,5 @@ config :hello_world, HelloWorld.Repo,
   username: "postgres",
   password: "postgres",
   database: "hello_world_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
