@@ -39,7 +39,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-g
 
 
 WORKDIR /app
-ADD . /app
+COPY . /app
 
 RUN mix local.hex --force
 RUN mix local.rebar --force 
