@@ -2,6 +2,8 @@ version: "2"
 services:
   phoenix:
     build: .
+    depends_on:
+      - db    
     ports:
       - 4000:4000    
   db:

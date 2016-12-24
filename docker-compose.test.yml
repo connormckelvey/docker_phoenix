@@ -1,13 +1,11 @@
 version: "2"
 services:
   phoenix:
-    image: connormckelvey/phoenix
+    build: connormckelvey/phoenix
     depends_on:
-      - db
-    environment:
-      MIX_ENV: prod
+      - db    
     ports:
-      - 4000:4000        
+      - 4000:4000    
   db:
     image: postgres:latest
     environment:
