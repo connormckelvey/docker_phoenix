@@ -3,9 +3,7 @@ services:
   phoenix:
     build: .
     ports:
-      - 4000:4000
-    volumes:
-      - ./:/app
+      - 4000:4000    
   db:
     image: postgres:latest
     environment:
