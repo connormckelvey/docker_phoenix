@@ -13,7 +13,7 @@ dependencies:
 test:
   override:
     - docker-compose up -d
-    - docker-compose run phoenix mix deps.get && npm install && npm run deploy && mix ecto.create && mix test
+    - docker exec elixirdocker_phoenix_1 mix test
 
 deployment:
   hub:
