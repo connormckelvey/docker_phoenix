@@ -14,7 +14,7 @@ test:
   override:
     - docker-compose up -d
     - docker-compose ps
-    - docker exec elixirdocker_phoenix_1 mix test
+    - docker exec dockerphoenix_phoenix_1 mix test
 
 deployment:
   hub:
