@@ -13,7 +13,8 @@ dependencies:
 test:
   override:
     - docker-compose up -d
-    - docker exec dockerphoenix_phoenix mix test
+    - docker-compose ps
+    - docker exec elixirdocker_phoenix_1 mix test
 
 deployment:
   hub:
